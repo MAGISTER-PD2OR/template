@@ -1,0 +1,66 @@
+﻿<html>
+<head>
+    <title>[% title %]</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=[% charset %]" />
+</head>
+<body>
+<p id="header">
+<h1>[% site_slogan %]</h1>
+
+{ if ([% $a %] == [% a %]) }
+<a href="https://www.google.ru/">google.ru</a><br>
+{ else }
+<p>Цицерон<br>
+<br>
+Оратор римский говорил<br>
+Средь бурь гражданских и тревоги:<br>
+«Я поздно встал — и на дороге<br>
+Застигнут ночью Рима был!»<br>
+Так!.. Но, прощаясь с римской славой,<br>
+С Капитолийской высоты<br>
+Во всем величье видел ты<br>
+Закат звезды ее кровавый!..<br>
+<br>
+Счастлив, кто посетил сей мир<br>
+В его минуты роковые!<br>
+Его призвали всеблагие<br>
+Как собеседника на пир.<br>
+Он их высоких зрелищ зритель,<br>
+Он в их совет допущен был —<br>
+И заживо, как небожитель,<br>
+Из чаши их бессмертье пил!<br>
+{ /if  }
+
+{ if ([% c %] < 1) }
+<a href="http://www.thg.ru/">thg.ru</a>
+{ else }
+<a href="http://www.hitfm.ua/">hitfm.ua</a>
+{ /if  }
+
+{ foreach ([% arr %] as $key => $val) }
+	<p><a href="http://bash.im/">[% $val %]</a></p>
+{ /foreach }
+
+
+{ if (2 > 3) }
+<a href="http://www.thg.ru/">thg.ru1</a>
+{ else }
+<a href="http://www.hitfm.ua/">hitfm.ua1</a>
+{ /if }
+
+
+
+{ foreach ([% $ar %] as $key => $val) }
+	<p> qwerty [% $key %]</p>
+{ /foreach }
+
+{ foreach ([% arr %] as $key => $val) }
+	<p> GOOD [% $val %]  </p>
+{ /foreach }
+
+[% $v %]
+<p>
+	TEST END
+</p>
+</body>
+</html>
